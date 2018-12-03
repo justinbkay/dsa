@@ -22,7 +22,7 @@ defmodule DSA.Queue do
   end
 
   def peek(queue) do
-    Agent.get(queue, fn(state) -> [_ | tail] = state; [next | _] = tail; next end)
+    Agent.get(queue, fn(state) -> [head | _] = state; head end)
   end
 
   def is_empty(queue) do
