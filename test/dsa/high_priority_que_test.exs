@@ -62,11 +62,11 @@ defmodule DSA.HighPriorityQueueTest do
     HighPriorityQueue.enqueue(hpq, "first HP", :high_priority)
     HighPriorityQueue.enqueue(hpq, "first")
 
-    HighPriorityQueue.is_empty?(hpq) == false
+    assert HighPriorityQueue.is_empty?(hpq) == false
     HighPriorityQueue.dequeue(hpq)
-    HighPriorityQueue.is_empty?(hpq) == false
+    assert HighPriorityQueue.is_empty?(hpq) == false
     HighPriorityQueue.dequeue(hpq)
-    HighPriorityQueue.is_empty?(hpq) == true
+    assert HighPriorityQueue.is_empty?(hpq) == true
 
   end
 end
